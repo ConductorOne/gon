@@ -1,0 +1,34 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  goreleaser:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: 1.21.x
+      - name: Build and install Gon
+        run: go install ./cmd/gon
+      - name: Import Keychain Certs
+        uses: apple-actions/import-codesign-certs@v1
+        with:
+          p12-file-base64: ${{ secrets.APPLE_SIGNING_KEY_P12 }}
+          p12-password: ${{ secrets.APPLE_SIGNING_KEY_P12_PASSWORD }}
+      - name: Run GoReleaser
+        uses: goreleaser/goreleaser-action@v4
+        with:
+          version: latest
+          args: release --clean
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELENG_GITHUB_TOKEN }}
+          AC_PASSWORD: ${{ secrets.AC_PASSWORD }}
