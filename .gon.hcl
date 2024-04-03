@@ -7,7 +7,7 @@ apple_id {
 }
 
 sign {
-  "application_identity": "Developer ID Application: Justin Gallardo (858DKH55XL)"
+  application_identity = "Developer ID Application: Justin Gallardo (858DKH55XL)"
 }
 
 zip {
