@@ -53,6 +53,6 @@ release:
 
 brews:
   - tap:
-      owner: mitchellh
+      owner: conductorone
       name: homebrew-gon
     description: "Sign, notarize, and package macOS CLI applications written in any language."
