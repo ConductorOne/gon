@@ -1,14 +1,13 @@
 source = ["./dist/macos_darwin_amd64/gon"]
-bundle_id = "com.mitchellh.gon"
+bundle_id = "com.conductorone.gon"
 
 apple_id {
-  username = "mitchell.hashimoto@gmail.com"
+  username = "justin.gallardo@conductorone.com"
   password = "@env:AC_PASSWORD"
-  provider = "UL304B4VGY"
 }
 
 sign {
-  application_identity = "97E4A93EAA8BAC7A8FD2383BFA459D2898100E56"
+  "application_identity": "Developer ID Application: Justin Gallardo (858DKH55XL)"
 }
 
 zip {
