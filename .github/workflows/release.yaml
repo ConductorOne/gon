@@ -18,7 +18,7 @@ jobs:
         with:
           go-version: 1.21.x
       - name: Build and install Gon
-        run: go install ./cmd/gon
+        run: make build && go install ./cmd/gon
       - name: Import Keychain Certs
         uses: apple-actions/import-codesign-certs@v1
         with:
