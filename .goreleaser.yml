@@ -52,3 +52,7 @@ brews:
       owner: conductorone
       name: homebrew-gon
     description: "Sign, notarize, and package macOS CLI applications written in any language."
+    install: |-
+      bin.install "gon"
+    test: |
+      system "#{bin}/gon --help"
