@@ -35,7 +35,6 @@ signs:
       - macos-zip
     cmd: gon
     args:
-      - --log-level=debug
       - .gon.hcl
     artifacts: all
 
