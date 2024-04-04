@@ -18,13 +18,13 @@ builds:
 archives:
   - id: macos-zip
     format: zip
-    name_template: "{{- .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+    name_template: "{{- .ProjectName }}-{{ .Os }}-{{ .Arch }}"
 
 checksum:
   disable: true
 
 signs:
-  - signature: "${artifact}-darwin-amd64.signed.zip"
+  - signature: "${artifact}-darwin-amd64.zip"
     ids:
       - macos-zip
     cmd: gon
@@ -45,7 +45,7 @@ release:
   ids:
     - none
   extra_files:
-    - glob: ./dist/gon-darwin-amd64.signed.zip
+    - glob: ./dist/gon-darwin-amd64.zip
 
 brews:
   - repository:
