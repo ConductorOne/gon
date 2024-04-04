@@ -10,5 +10,5 @@ sign {
 }
 
 zip {
-  output_path = "./dist/gon_macos.zip"
-}
+  output_path = "./dist/gon-darwin-amd64.signed.zip"
+ }

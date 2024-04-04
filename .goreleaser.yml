@@ -30,7 +30,7 @@ checksum:
   disable: true
 
 signs:
-  - signature: "${artifact}_macos.zip"
+  - signature: "${artifact}-darwin-amd64.signed.zip"
     ids:
       - macos-zip
     cmd: gon
@@ -51,7 +51,7 @@ release:
   ids:
     - none
   extra_files:
-    - glob: ./dist/gon_macos.zip
+    - glob: ./dist/gon-darwin-amd64.signed.zip
 
 brews:
   - tap:
