@@ -1,4 +1,4 @@
-source = ["./dist/macos_darwin_arm64/gon"]
+source = ["./dist/macos_darwin_amd64_v1/gon"]
 bundle_id = "com.conductorone.gon"
 
 apple_id {
