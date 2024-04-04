@@ -55,7 +55,6 @@ func upload(ctx context.Context, opts *Options) (string, error) {
 	logger.Info("submitting file for notarization",
 		"file", opts.File,
 		"command_path", cmd.Path,
-		"command_args", cmd.Args,
 	)
 
 	// Execute

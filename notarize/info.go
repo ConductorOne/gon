@@ -81,7 +81,6 @@ func info(ctx context.Context, uuid string, opts *Options) (*Info, error) {
 	logger.Info("requesting notarization info",
 		"uuid", uuid,
 		"command_path", cmd.Path,
-		"command_args", cmd.Args,
 	)
 
 	// Execute

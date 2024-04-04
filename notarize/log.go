@@ -83,7 +83,6 @@ func log(ctx context.Context, uuid string, opts *Options) (*Log, error) {
 	logger.Info("requesting notarization log",
 		"uuid", uuid,
 		"command_path", cmd.Path,
-		"command_args", cmd.Args,
 	)
 
 	// Execute
