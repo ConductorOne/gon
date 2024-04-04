@@ -3,7 +3,6 @@ bundle_id = "com.conductorone.gon"
 
 apple_id {
   username = "justin.gallardo@conductorone.com"
-  password = @env:AC_PASSWORD
 }
 
 sign {
