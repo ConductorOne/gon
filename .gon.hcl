@@ -13,8 +13,3 @@ sign {
 zip {
   output_path = "./dist/gon_macos.zip"
 }
-
-dmg {
-  output_path = "./dist/gon_macos.dmg"
-  volume_name = "gon"
-}
