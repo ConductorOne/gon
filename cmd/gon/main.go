@@ -169,7 +169,7 @@ func realMain() int {
 			return 1
 		}
 
-		cfg.AppleId.Password = "@env:AC_PASSWORD"
+		cfg.AppleId.Password = os.Getenv("AC_PASSWORD")
 	}
 	if cfg.AppleId.Provider == "" {
 		cfg.AppleId.Provider = os.Getenv("AC_PROVIDER")
